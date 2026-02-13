@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Little AP ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Georgia', serif;
+    background:#ffe6ea;
+    text-align:center;
+    overflow:hidden;
+}
+
+.page{
+    display:none;
+    height:100vh;
+    padding:40px;
+    box-sizing:border-box;
+}
+
+.active{
+    display:block;
+}
+
+h1{
+    color:#ff4f81;
+    font-size:2.8em;
+}
+
+p{
+    max-width:600px;
+    margin:auto;
+    font-size:1.2em;
+    line-height:1.7;
+    color:#333;
+}
+
+img{
+    width:250px;
+    border-radius:20px;
+    margin:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+button{
+    margin-top:30px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    font-size:1.1em;
+    background:#ff4f81;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8e36e66bb.mp3">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+<h1>My Little AP ❤️</h1>
+<p>
+Every love story is beautiful… but ours is my favorite.
+</p>
+<button onclick="next(1)">Next ➜</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+<h1>The Day You Came Into My Life</h1>
+<p>
+I still remember how everything changed after you came.
+Life became softer, happier, and full of reasons to smile.
+</p>
+
+<img src="photo1.jpg">
+<br>
+<button onclick="next(2)">Next ➜</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+<h1>Our Beautiful Moments</h1>
+
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+
+<p>
+Every moment with you feels like a dream I never want to wake up from.
+</p>
+
+<button onclick="next(3)">Next ➜</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+<h1>You Are Special</h1>
+
+<img src="photo4.jpg">
+
+<p>
+Your smile is my favorite sight.  
+Your happiness means everything to me.  
+You are not just someone I love…  
+You are someone I want forever.
+</p>
+
+<button onclick="next(4)">Next ➜</button>
+</div>
+
+<!-- FINAL PAGE -->
+<div class="page" id="p5">
+<h1>I Have One Question 💍</h1>
+
+<img src="photo5.jpg">
+
+<p>
+Little AP…  
+Will you be mine forever?
+</p>
+
+<button onclick="yes()">YES ❤️</button>
+<button onclick="no()">NO 🙈</button>
+
+<p id="result"></p>
+</div>
+
+<script>
+function next(n){
+    document.getElementById("p"+n).classList.remove("active");
+    document.getElementById("p"+(n+1)).classList.add("active");
+}
+
+function yes(){
+    document.getElementById("result").innerHTML =
+    "You just made me the happiest person alive ❤️";
+}
+
+function no(){
+    document.getElementById("result").innerHTML =
+    "Hehe… try clicking YES 😌❤️";
+}
+</script>
+
+</body>
+</html>
+
